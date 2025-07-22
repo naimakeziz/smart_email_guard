@@ -1,0 +1,96 @@
+[
+    {
+        "email_text": "curl -X POST http://127.0.0.1:5000/scan \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-KEY: your_api_key_here\" \\\n  -d '{\"email_text\": \"Hello John, just a reminder about our meeting tomorrow at 10 AM. Best regards, Sarah.\"}'",
+        "result": {
+            "label": "spam",
+            "confidence": 0.74,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        }
+    },
+    {
+        "email_text": "curl -X POST http://127.0.0.1:5000/scan \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-KEY: your_api_key_here\" \\\n  -d '{\"email_text\": \"Thank you for your purchase. Your order will be shipped soon.\"}'",
+        "result": {
+            "label": "spam",
+            "confidence": 0.76,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        }
+    },
+    {
+        "email_text": "curl -X POST http://127.0.0.1:5000/scan \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-KEY: your_api_key_here\" \\\n  -d '{\"email_text\": \"Congratulations! You\u2019ve been selected to win a $1000 gift card. Click here to claim now!\"}'",
+        "result": {
+            "label": "spam",
+            "confidence": 0.63,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        }
+    },
+    {
+        "email_text": "Dear Candidate,\n\nWe are pleased to inform you that you have been selected for Phase 2 of our recruitment process at Richdale AI  Agadir. \n\nCongratulations on this achievement ! \n\nPlease find attached the following documents related to your assignment:\n\nSmart Email Guardian: AI-Powered Spam & Phishing Detection Toolkit\n\nSmart Email Guardian \u2013 Deployment & Verification Guide\n\nSubmission Deadline:\nAll deliverables must be submitted by Tuesday, July 22, 2025 end of the day. Please send your final work via email.\n\nWhat You Must Submit:\nA public GitHub repository containing the full project.\n\nA functional CLI tool named email_guard.py, capable of accepting input and returning results.\n\nA deployed web or mobile interface for user interaction.\n\nA hosted backend API with a working /scan endpoint.\n\nA demo video, only if the mobile app cannot be hosted online.\n\nA detailed README.md with clear documentation.\n\nA reflection.md summarizing your approach and what you\u2019ve learned through this challenge.\n\nThis assignment is designed to evaluate not only your technical skills but also your ability to deliver a complete, user facing solution in a structured and autonomous manner.\n\n We look forward to seeing your creativity, problem-solving ability, and attention to detail reflected in your submission. \n\nYou\u2019ve already proven your potential, now it's time to take it one step further ! \n\nIf you have any questions or need clarification at any point, please do not hesitate to reach out by email. \n\nWishing you the very best of luck!\n\nBest regards,\nSoraya El Maaroufi\n\n06 61 53 10 67 \n\nRichdale AI  Agadir",
+        "result": {
+            "label": "ham",
+            "confidence": 0.51,
+            "explanation": "\u2705 Appears to be a safe and legitimate message."
+        }
+    },
+    {
+        "email_text": "Service Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.66,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        }
+    },
+    {
+        "email_text": "Service Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.66,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        },
+        "timestamp": "2025-07-22 12:35:17"
+    },
+    {
+        "email_text": "SolarWinds\nEffortless ITSM Episode 2: Crush Your SLAs\nService Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.59,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        },
+        "timestamp": "2025-07-22 12:42:31"
+    },
+    {
+        "email_text": "Dear Candidate,\n\nWe are pleased to inform you that you have been selected for Phase 2 of our recruitment process at Richdale AI  Agadir. \n\nCongratulations on this achievement ! \n\nPlease find attached the following documents related to your assignment:\n\nSmart Email Guardian: AI-Powered Spam & Phishing Detection Toolkit\n\nSmart Email Guardian \u2013 Deployment & Verification Guide\n\nSubmission Deadline:\nAll deliverables must be submitted by Tuesday, July 22, 2025 end of the day. Please send your final work via email.\n\nWhat You Must Submit:\nA public GitHub repository containing the full project.\n\nA functional CLI tool named email_guard.py, capable of accepting input and returning results.\n\nA deployed web or mobile interface for user interaction.\n\nA hosted backend API with a working /scan endpoint.\n\nA demo video, only if the mobile app cannot be hosted online.\n\nA detailed README.md with clear documentation.\n\nA reflection.md summarizing your approach and what you\u2019ve learned through this challenge.\n\nThis assignment is designed to evaluate not only your technical skills but also your ability to deliver a complete, user facing solution in a structured and autonomous manner.\n\n We look forward to seeing your creativity, problem-solving ability, and attention to detail reflected in your submission. \n\nYou\u2019ve already proven your potential, now it's time to take it one step further ! \n\nIf you have any questions or need clarification at any point, please do not hesitate to reach out by email. \n\nWishing you the very best of luck!\n\nBest regards,\nSoraya El Maaroufi\n\n06 61 53 10 67 \n\nRichdale AI  Agadir",
+        "result": {
+            "label": "ham",
+            "confidence": 0.51,
+            "explanation": "\u2705 Appears to be a safe and legitimate message."
+        },
+        "timestamp": "2025-07-22 16:27:40"
+    },
+    {
+        "email_text": "SolarWinds\nEffortless ITSM Episode 2: Crush Your SLAs\nService Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.59,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        },
+        "timestamp": "2025-07-22 16:28:29"
+    },
+    {
+        "email_text": "SolarWinds\nEffortless ITSM Episode 2: Crush Your SLAs\nService Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.59,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        },
+        "timestamp": "2025-07-22 16:28:38"
+    },
+    {
+        "email_text": "View Online\nSolarWinds\nEffortless ITSM Episode 2: Crush Your SLAs\nService Level Agreements are the heartbeat of IT operations\u2014but when teams are buried in tickets and legacy tools, it\u2019s no wonder they\u2019re hard to hit.\n\nWhat if you could flip the script?\n\nIn our July 23 webinar, we\u2019ll show how SolarWinds solutions help you:\n\nUse automation and AI to meet SLA deadlines faster\nImprove visibility and accuracy with integrated asset and knowledge management\nPrioritize UX to reduce friction for agents and end users\nCrushing your SLAs isn\u2019t about working harder\u2014it\u2019s about working smarter with a tool that has the right features.\n\n\ud83d\udcc5Date:\u202fJuly 23, 2025\n\u23f0Time:\u202f10:00 a.m. \u2013 11:00 a.m. CT\n\nSecure your seat below before it\u2019s too late.\n\n \nRegister Now \nSWUG - SolarWinds User Group | Register Now",
+        "result": {
+            "label": "spam",
+            "confidence": 0.58,
+            "explanation": "\u26a0\ufe0f Contains suspicious or spam-like content."
+        },
+        "timestamp": "2025-07-22 18:20:20"
+    }
+]

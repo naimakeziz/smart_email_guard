@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📧 Smart Email Guard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📧 Smart Email Guard</h1>
+
+    <form id="emailForm">
+      <textarea id="emailInput" placeholder="Paste the email content here..." required></textarea>
+      <button type="submit">Scan Email</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h3>Scan Result:</h3>
+      <p><strong>Label:</strong> <span id="label"></span></p>
+      <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+      <p><strong>Explanation:</strong> <span id="explanation"></span></p>
+    </div>
+
+    <h3>📜 Scan History</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script>
+    const ngrokBaseURL = window.location.origin; // Auto-detects domain
+
+    const form = document.getElementById("emailForm");
+    const emailInput = document.getElementById("emailInput");
+    const resultDiv = document.getElementById("result");
+    const labelSpan = document.getElementById("label");
+    const confidenceSpan = document.getElementById("confidence");
+    const explanationSpan = document.getElementById("explanation");
+    const historyList = document.getElementById("historyList");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = emailInput.value;
+
+      const res = await fetch(`${ngrokBaseURL}/scan`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-KEY": "mysecret123"
+        },
+        body: JSON.stringify({ email_text: email })
+      });
+
+      const data = await res.json();
+
+      labelSpan.textContent = data.label;
+      confidenceSpan.textContent = `${(data.confidence * 100).toFixed(2)}%`;
+      explanationSpan.textContent = data.explanation;
+      resultDiv.classList.remove("hidden");
+
+      loadHistory();
+    });
+
+    async function loadHistory() {
+      const res = await fetch(`${ngrokBaseURL}/history`, {
+        headers: {
+          "X-API-KEY": "mysecret123"
+        }
+      });
+      const history = await res.json();
+
+      historyList.innerHTML = "";
+      history.slice().reverse().forEach(entry => {
+        const li = document.createElement("li");
+        li.textContent = `[${entry.timestamp}] ${entry.result.label.toUpperCase()} — ${(entry.result.confidence * 100).toFixed(1)}%`;
+        historyList.appendChild(li);
+      });
+    }
+
+    loadHistory(); // Load history on page load
+  </script>
+</body>
+</html>
+
+
